@@ -144,6 +144,19 @@ Dark green: #28b485
         }
     }
     
+    @keyframes moveInBotton{
+        0%{
+            opacity: 0;
+            transform: translateY(30px)
+        }
+    
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    
     /*Botón Descubre nuestras excursiones*/
     /*Pseudo classe*/
     .btn:link,
@@ -155,13 +168,14 @@ Dark green: #28b485
         /*Relleno alrededor del botón*/
         padding: 15px 40px;
         /*Color del relleno*/
-        background-color: #fff;
+        /*background-color: #fff;*/
         /*Mostrarlo como un bloque en linea*/
         display: inline-block;
         /*Borde del boton*/
         border-radius: 100px;
         /*Todas las propiedadees estan abilitadas paraser animadas*/
-        transition:all .2s;
+        transition: all .2s;
+        position: relative;
         
         
     }
@@ -179,7 +193,7 @@ Dark green: #28b485
     .btn:active{
         /*hacia arriba*/
         transform:translateY(-1px);
-        box-shadow:0 5px 10px rgb(0, 0, 0,.2) ;
+        box-shadow:0 5px 10px rgb(0, 0, 0,.2);
     
     }
     
@@ -190,4 +204,41 @@ Dark green: #28b485
         background-color: #fff;
         /*Color del texto*/
         color: #777;
+    }
+    
+    /*Agregar pseudo-elemento*/
+    .btn::after{
+        /*Para que aparesca en la página
+        necesitamos espescificar su propiedad de contenido
+        */
+        content: "";
+        /*Establece los tipos de visualización interna y externa*/
+        display: inline-block;
+        /*Altura*/
+        height:100%;
+        /*Ancho*/
+        width:100%;
+        border-radius:100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    /*Para el botón a la derecha*/
+    .btn-whithe::after{
+        background-color: #fff;
+    }
+    
+    .btn:hover::after{
+        transform:  scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+       
+    }
+    
+    .btn-animated{
+        /* .5 tiempo  esase-out funcion de sincronización  .75s retraso de la animación*/
+        animation:moveInBotton .5s ease-out .75s; 
+        animation-fill-mode: backwards;
     }
