@@ -51,13 +51,14 @@ Dark green: #28b485
         animation: moveInRight 0.6s ease-in;
      } 
     
-    /*Centrar span */
+    /*Centrar div text-box */
     .text-box{
         position: absolute;
         top: 40%;
         left: 50%;
        /* background-color: rebeccapurple;*/
         transform: translate(-50%, -50%);
+        /*Centrar el texto del boton*/
         text-align: center;
     }    
     
@@ -66,7 +67,9 @@ Dark green: #28b485
         text-transform:uppercase;
     
         /*Ocultar el tempblor de la animación del texto*/
-        backface-visibility:hidden;
+        backface-visibility:hidden; 
+        margin-bottom: 60px;
+    
     
     }
     
@@ -139,4 +142,52 @@ Dark green: #28b485
             /*Animar en la dirección x*/
             transform: translate(0);
         }
+    }
+    
+    /*Botón Descubre nuestras excursiones*/
+    /*Pseudo classe*/
+    .btn:link,
+    .btn:visited{
+        /*Transformar el texto a mayusculas*/
+        text-transform: uppercase;
+        /*Sin decoración*/
+        text-decoration: none;
+        /*Relleno alrededor del botón*/
+        padding: 15px 40px;
+        /*Color del relleno*/
+        background-color: #fff;
+        /*Mostrarlo como un bloque en linea*/
+        display: inline-block;
+        /*Borde del boton*/
+        border-radius: 100px;
+        /*Todas las propiedadees estan abilitadas paraser animadas*/
+        transition:all .2s;
+        
+        
+    }
+    
+    /*Para cmbiar el stilo de un botton cuando mueve el mause sobre el*/
+    .btn:hover{
+        /*Se mueva hacia arriba*/
+        transform:translateY(-3px);
+        /*Agregar sombra de la caja*/
+        /* 0 en la direcion x, 10px de la sombra hacia abajo, 20px desenfonque*/
+        box-shadow:0 10px 20px rgb(0, 0, 0,.2) ;
+    }
+    
+    /*Estado activo cuando hacemos clic*/
+    .btn:active{
+        /*hacia arriba*/
+        transform:translateY(-1px);
+        box-shadow:0 5px 10px rgb(0, 0, 0,.2) ;
+    
+    }
+    
+    
+    /*Color del botón*/
+    .btn-whithe{
+        /*Color de fondo*/
+        background-color: #fff;
+        /*Color del texto*/
+        color: #777;
     }
