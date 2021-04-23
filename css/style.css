@@ -46,7 +46,12 @@ Dark green: #28b485
         height:35px;
     }
     
-    /*centrar span */
+    /*Animación del logo*/
+    .logo-box:hover .logo {
+        animation: moveInRight 0.6s ease-in;
+     } 
+    
+    /*Centrar span */
     .text-box{
         position: absolute;
         top: 40%;
@@ -60,20 +65,78 @@ Dark green: #28b485
         color: #fff;
         text-transform:uppercase;
     
+        /*Ocultar el tempblor de la animación del texto*/
+        backface-visibility:hidden;
+    
     }
     
-    .heading-primary-main{
+    .heading-primary-main{  
         display: block;
-        font-size:60px;/*Tamaño de la letra*/
-        font-weight: 400; /*peso de la fuente*/
-        letter-spacing: 35px; /*espacio entre letras*/
-    
+        font-size: 60px;/*Tamaño de la letra*/
+        font-weight: 400;/*peso de la fuente*/
+        letter-spacing: 35px;/*Espacio entre letras*/
+         /*Para que la animación fucione*/
+        animation-name: moveInLeft;
+            /*La duración de la nimación*/
+        animation-duration: 1s;
+        /*animation: moveInLeft 1s ease-out ;*/
+        /*Tipo de animación más lento o rapido*/
+        animation-timing-function: ease-out;
+        /*
+            animation-delay: 3s;*/
+        /*Repite la animación*/
+        /*animation-iteration-count: 3;*/
     }
     
     .heading-primary-sub{
         display: block;
         font-size: 20px;
         font-weight: 700;
-        letter-spacing: 17.5px;
+        letter-spacing: 17.4px;
+        animation: moveInRight 1s ease-out;
     }
     
+    /*Animación de header empieza de la izquirda*/
+    @keyframes moveInLeft {
+        /*Comienza en cero*/
+        0%{
+           /*opacidad del texto*/
+           opacity: 0;
+           transform: translateX(-100px);
+    
+        }
+      
+        /*La animación sucede*/
+        80% {  
+             
+            transform: translateX(10px) ;
+        }  
+    
+        /*Termina la animación*/
+        100%{
+           opacity: 1;
+           /*Animar en la direción x*/
+           transform: translate(0);
+        }
+    }
+    
+    /*Animación empieza de la derecha*/
+    @keyframes moveInRight{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    
+        /**/
+        80%{
+            transform: translate(-10px);
+        }
+    
+    
+        /*Termina la animación*/
+        100%{
+            opacity: 1;
+            /*Animar en la dirección x*/
+            transform: translate(0);
+        }
+    }
