@@ -1,0 +1,46 @@
+body {
+    font-family:"Lato", sans-serif;
+    font-weight:400; /*peso de la fuente*/
+    line-height:1.7;
+    color:$color-grey-dark;
+    padding:3rem;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform:uppercase;
+
+    /*Ocultar el tempblor de la animación del texto*/
+    backface-visibility:hidden; 
+    margin-bottom: 6rem;
+
+    &--main{  
+        display: block;
+        font-size: 6rem;/*Tamaño de la letra*/
+        font-weight: 400;/*peso de la fuente*/
+        letter-spacing: 3.5rem;/*Espacio entre letras*/
+         /*Para que la animación fucione*/
+        animation-name: moveInLeft;
+            /*La duración de la nimación*/
+        animation-duration: 1s;
+        /*animation: moveInLeft 1s ease-out ;*/
+        /*Tipo de animación más lento o rapido*/
+        animation-timing-function: ease-out;
+        /*
+            animation-delay: 3s;*/
+        /*Repite la animación*/
+        /*animation-iteration-count: 3;*/
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+
+}
+
+
+

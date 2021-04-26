@@ -5,87 +5,6 @@ Light green:#7ed567f
 Medium Gren: #55c57a
 Dark green: #28b485 
 */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-/*selector raiz*/
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /*peso de la fuente*/
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-  /*cuadro de borde cambia modelo del cuadro para que los bordes y los rellenos ya no
-    se agreguen al ancho total o la altura total que especificamos para un cuadro*/ }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  /*clip-path: polygon(x y, x y, x y)*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /*Animación del logo*/
-  /*Centrar div text-box */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__logo-box:hover .header__logo {
-    animation: moveInRight 0.6s ease-in; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    /* background-color: rebeccapurple;*/
-    transform: translate(-50%, -50%);
-    /*Centrar el texto del boton*/
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /*Ocultar el tempblor de la animación del texto*/
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    /*Tamaño de la letra*/
-    font-weight: 400;
-    /*peso de la fuente*/
-    letter-spacing: 3.5rem;
-    /*Espacio entre letras*/
-    /*Para que la animación fucione*/
-    animation-name: moveInLeft;
-    /*La duración de la nimación*/
-    animation-duration: 1s;
-    /*animation: moveInLeft 1s ease-out ;*/
-    /*Tipo de animación más lento o rapido*/
-    animation-timing-function: ease-out;
-    /*
-            animation-delay: 3s;*/
-    /*Repite la animación*/
-    /*animation-iteration-count: 3;*/ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
-
 /*Animación de header empieza de la izquirda*/
 @keyframes moveInLeft {
   /*Comienza en cero*/
@@ -123,6 +42,62 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/*selector raiz*/
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  /*cuadro de borde cambia modelo del cuadro para que los bordes y los rellenos ya no
+    se agreguen al ancho total o la altura total que especificamos para un cuadro*/ }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*peso de la fuente*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /*Ocultar el tempblor de la animación del texto*/
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    /*Tamaño de la letra*/
+    font-weight: 400;
+    /*peso de la fuente*/
+    letter-spacing: 3.5rem;
+    /*Espacio entre letras*/
+    /*Para que la animación fucione*/
+    animation-name: moveInLeft;
+    /*La duración de la nimación*/
+    animation-duration: 1s;
+    /*animation: moveInLeft 1s ease-out ;*/
+    /*Tipo de animación más lento o rapido*/
+    animation-timing-function: ease-out;
+    /*
+            animation-delay: 3s;*/
+    /*Repite la animación*/
+    /*animation-iteration-count: 3;*/ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn {
   /*Botón Descubre nuestras excursiones*/
@@ -171,8 +146,8 @@ body {
       background-color: #fff; }
   .btn::after {
     /*Para que aparesca en la página
-            necesitamos espescificar su propiedad de contenido
-            */
+        necesitamos espescificar su propiedad de contenido
+        */
     content: "";
     /*Establece los tipos de visualización interna y externa*/
     display: inline-block;
@@ -190,3 +165,57 @@ body {
     /* .5 tiempo  esase-out funcion de sincronización  .75s retraso de la animación*/
     animation: moveInBotton .5s ease-out .75s;
     animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /*clip-path: polygon(x y, x y, x y)*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*Animación del logo*/
+  /*Centrar div text-box */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__logo-box:hover .header__logo {
+    animation: moveInRight 0.6s ease-in; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* background-color: rebeccapurple;*/
+    transform: translate(-50%, -50%);
+    /*Centrar el texto del boton*/
+    text-align: center; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /*clip-path: polygon(x y, x y, x y)*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*Animación del logo*/
+  /*Centrar div text-box */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__logo-box:hover .header__logo {
+    animation: moveInRight 0.6s ease-in; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* background-color: rebeccapurple;*/
+    transform: translate(-50%, -50%);
+    /*Centrar el texto del boton*/
+    text-align: center; }

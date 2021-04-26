@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before{
+margin:0;
+padding:0;
+box-sizing: inherit;
+
+}
+
+/*selector raiz*/
+html {
+    font-size: 62.5%;
+    
+}
+
+body {
+    box-sizing: border-box; /*cuadro de borde cambia modelo del cuadro para que los bordes y los rellenos ya no
+    se agreguen al ancho total o la altura total que especificamos para un cuadro*/
+}

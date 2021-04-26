@@ -1,0 +1,55 @@
+/*Animación de header empieza de la izquirda*/
+@keyframes moveInLeft {
+    /*Comienza en cero*/
+    0%{
+       /*opacidad del texto*/
+       opacity: 0;
+       transform: translateX(-10rem);
+
+    }
+  
+    /*La animación sucede*/
+    80% {  
+         
+        transform: translateX(1rem) ;
+    }  
+
+    /*Termina la animación*/
+    100%{
+       opacity: 1;
+       /*Animar en la direción x*/
+       transform: translate(0);
+    }
+}
+
+/*Animación empieza de la derecha*/
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    /**/
+    80%{
+        transform: translate(-1rem);
+    }
+
+    /*Termina la animación*/
+    100%{
+        opacity: 1;
+        /*Animar en la dirección x*/
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBotton{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
