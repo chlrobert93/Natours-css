@@ -1,0 +1,15 @@
+.row{
+    max-width: $grid-width;
+    background-color:#eee;
+    margin: 0 auto;
+
+
+    //Selecionamos todo exepto el ultimo hijo
+    &:not(:last-child){
+        //agrega margen inferior    
+        margin-bottom: $gutter-vertical;
+    }
+    
+}
+
+//row:not()
