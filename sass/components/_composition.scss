@@ -9,6 +9,7 @@
         z-index: 10;
         //para el umento de la foto por encima
         transition: all .2s;
+        outline-offset: 2rem;
 
         &--p1{
             //izquierda
@@ -27,11 +28,20 @@
         }
 
         &:hover {
-            transform: scale(1.05);
+            //Contorno de marco verde
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.05) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba($color-dark, .4);
             //sobresalga la img enfrente de todas
             z-index: 20;
 
         }
+    }
+    //Selecciona una foto que no esta suspendida
+    //composition: hover composition__photo:not(:hover){}
+
+    &:hover &__photo:not(:hover){
+        transform: scale(.95);
+
     }
 }
