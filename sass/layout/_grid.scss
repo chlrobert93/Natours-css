@@ -1,6 +1,5 @@
 .row{
     max-width: $grid-width;
-    background-color:#eee;
     margin: 0 auto;
 
      //row:not()
@@ -11,11 +10,10 @@
     }
 
     @include clearfix;
-
     //Seleccionador ^ que comienzan con col- 
     //$cual quier clase que termine con col-
     [class^="col-"]{
-        background-color:#eea;
+ 
         float:left;
     
         &:not(:last-child){
