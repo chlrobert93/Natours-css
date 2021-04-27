@@ -63,3 +63,21 @@ body {
     }
 }
 
+     .heading-tertiary{
+         font-size: $default-font-size;
+         font-weight: 700;
+         text-transform: uppercase;              
+        }
+
+     .paragraph{
+         font-size: $default-font-size;
+         text-align: justify;
+
+
+        //selecionamos todos menos el ultimo hijo
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        
+          }
+
+        }
