@@ -1,0 +1,12 @@
+.card{
+    background-color: orangered;
+    height: 50rem;
+    //para pode visualizar animacion rotación
+    transition: all .8s;
+
+
+ //animación de rotación
+ &:hover{
+   transform: rotateY(180deg);  
+ }
+}
