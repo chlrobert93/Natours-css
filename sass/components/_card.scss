@@ -1,12 +1,20 @@
 .card{
-    background-color: orangered;
-    height: 50rem;
-    //para pode visualizar animacion rotación
-    transition: all .8s;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__side {
+
+        background-color: orangered;
+        color: white;
+        font-size: 2rem;
+        height: 50rem;
+        //para pode visualizar animacion rotación
+        transition: all .8s;
+    }
 
 
- //animación de rotación
- &:hover{
-   transform: rotateY(180deg);  
- }
+    //animación de rotación
+    &:hover &__side{
+    transform: rotateY(180deg);  
+    }
 }
