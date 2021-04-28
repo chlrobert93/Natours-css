@@ -13,4 +13,16 @@
     url(../img/nat-4.jpg);
     //Tamaño de imagen de fondo
     background-size:cover;
+
+    //Sesgar la parte de cuadros
+    transform: skewY(-7deg);
+
+    //Elimininar sesgo 
+    //Seleccionar todos los hijos directos
+    & > * {
+        transform: skewY(7deg);
+    }
 }
+
+
+
