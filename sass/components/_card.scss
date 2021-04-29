@@ -67,6 +67,8 @@
             -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
            //clip-path: circle(9rem at 18rem 10rem);
+           border-top-left-radius: 3px;
+           border-top-right-radius: 3px;
           
         //Gradiente parte frontal
         &--1{

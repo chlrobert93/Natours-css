@@ -34,7 +34,7 @@
         transform:  scaleX(1.4) scaleY(1.6);
         opacity: 0;
     
-    }
+      }
     }
 
     /*Estado activo cuando hacemos clic*/
@@ -52,12 +52,25 @@
         background-color: $color-white;
         /*Color del texto*/
         color: $color-grey-dark;
-    /*Para el botón a la derecha*/
-    &::after{
-        background-color: $color-white;
-    }
+        /*Para el botón a la derecha*/
+      &::after{
+         background-color: $color-white;
+      }
 
     }
+
+    &--green{
+        /*Color de fondo*/
+        background-color: $color-primary;
+        /*Color del texto*/
+        color: $color-white;
+        /*Para el botón a la derecha*/
+      &::after{
+         background-color: $color-primary;
+      }
+
+    }
+
 
     /*Agregar pseudo-elemento*/
     &::after{

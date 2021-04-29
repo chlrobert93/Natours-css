@@ -136,6 +136,12 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margi-top-huge {
+  margin-top: 10rem; }
+
 .btn {
   /*Pseudo classe*/
   /*Para cmbiar el stilo de un botton cuando mueve el mause sobre el*/
@@ -180,6 +186,14 @@ body {
     /*Para el botón a la derecha*/ }
     .btn--whithe::after {
       background-color: #fff; }
+  .btn--green {
+    /*Color de fondo*/
+    background-color: #55c57a;
+    /*Color del texto*/
+    color: #fff;
+    /*Para el botón a la derecha*/ }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn::after {
     /*Para que aparesca en la página
         necesitamos espescificar su propiedad de contenido
@@ -257,7 +271,9 @@ body {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture--2 {
@@ -403,7 +419,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 10rem 0;
   margin-top: -10rem; }
 
 .row {
