@@ -38,7 +38,7 @@
         transform: skewX(12deg);
     }
 
-    //texto en la iminagen
+    //texto en la imagen
     &__caption {
        position: absolute; 
        top: 50%;
@@ -48,7 +48,16 @@
        color:$color-white;
        text-transform: uppercase;
        font-size: 1.7rem;
-    
+       opacity: 0;
+       transition: all .5s;
+       //Arreglar el error del pequeño temblor
+       backface-visibility: hidden;
+
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
 
     }
      
