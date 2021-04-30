@@ -24,6 +24,10 @@
        clip-path: circle(50% at 50% 50%);
        //Ajustar el circulo a ala izquierda
        transform: translateX(-3rem) skewX(12deg);
+       position:  relative;
+       
+      
+
     }
 
     &__img {
@@ -33,4 +37,19 @@
     &__text {
         transform: skewX(12deg);
     }
+
+    //texto en la iminagen
+    &__caption {
+       position: absolute; 
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, 20%);
+       text-align: center;
+       color:$color-white;
+       text-transform: uppercase;
+       font-size: 1.7rem;
+    
+
+    }
+     
 }
