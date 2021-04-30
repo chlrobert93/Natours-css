@@ -24,14 +24,19 @@
        clip-path: circle(50% at 50% 50%);
        //Ajustar el circulo a ala izquierda
        transform: translateX(-3rem) skewX(12deg);
+       overflow: hidden; 
        position:  relative;
        
-      
-
+    
     }
 
     &__img {
         height: 100%;
+        transform: translate(-4rem) scale(1.4);
+        transition: all .5s;
+        overflow: hidden; 
+    
+      
     }
 
     &__text {
@@ -61,4 +66,7 @@
 
     }
      
+    &:hover &__img {
+        transform: translate(-4rem) scale(1); 
+    }
 }
