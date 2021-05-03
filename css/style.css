@@ -142,6 +142,15 @@ body {
 .u-margi-top-huge {
   margin-top: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15; }
+
 .btn {
   /*Pseudo classe*/
   /*Para cmbiar el stilo de un botton cuando mueve el mause sobre el*/
@@ -469,8 +478,8 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 15rem 0; }
 
 .row {
   max-width: 114rem;
