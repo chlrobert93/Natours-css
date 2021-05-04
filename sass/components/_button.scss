@@ -1,4 +1,5 @@
 .btn{
+    &,//para hacer visible los estilos del boton reservación
     /*Pseudo classe*/
     &:link,
     &:visited{
@@ -18,6 +19,10 @@
         transition: all .2s;
         position: relative;
         font-size: $default-font-size;
+
+        //Cambiar elemento button
+        border: none;
+        cursor: pointer;
         
     }
 
@@ -38,10 +43,13 @@
     }
 
     /*Estado activo cuando hacemos clic*/
-    &:active{
+    &:active
+    //,&:focus
+    {
+        outline: none; //quitar efecto de cuadro en reservas boton
         /*hacia arriba*/
         transform:translateY(-1px);
-    box-shadow:0 .5rem 1rem rgba($color-dark,.2);
+        box-shadow:0 .5rem 1rem rgba($color-dark,.2);
 
     }
 

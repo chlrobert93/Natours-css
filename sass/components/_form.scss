@@ -60,7 +60,8 @@
 
      //Oculatar el radio button
      &__radio-input{
-         display: none;
+         //display: none;
+         opacity: 0;
      }
 
     &__radio-label{
