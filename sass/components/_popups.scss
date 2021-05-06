@@ -43,5 +43,21 @@
          font-size:1.4rem;
          margin-bottom: 4rem;
          text-align: justify;
+
+         -moz-column-count: 2;
+         -moz-column-gap: 4rem;
+         -moz-column-rule: 1px solid $color-grey-light-2;
+
+         column-count: 2;
+         //Espacio entre columna
+         column-gap: 4rem;  //1em  = 14px
+         column-rule: 1px solid $color-grey-light-2;
+
+         //Automaticamente donde colocar guiones
+         -moz-hyphens: auto;
+         -ms-hyphens: auto;
+         -webkit-hyphens: auto;
+          hyphens: auto;
+         
     }
 }
