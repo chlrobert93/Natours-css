@@ -15,17 +15,22 @@
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-dark, .2);
         border-radius: 3px;
+        display: table;
+        //corregir desbordamiento
+        overflow: hidden;
 
     }
 
     &__left{
          width: 33.333333%;
-         float:left;
+         display: table-cell;
     }
 
     &__right {
          width: 66.6666667%;
-         float:left;
+         display:table-cell;
+         vertical-align: middle;
+         padding: 3rem 5rem;
      
     }
 
@@ -34,8 +39,9 @@
          width: 100%;
     }
 
-    &_text{
-
-
+    &__text{
+         font-size:1.4rem;
+         margin-bottom: 4rem;
+         text-align: justify;
     }
 }
