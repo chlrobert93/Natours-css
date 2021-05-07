@@ -10,8 +10,29 @@ box-sizing: inherit;
 /*selector raiz*/
 html {
     //Esto define que es un rem
-    font-size: 62.5%;
+    //Esto define todo el tamaño de nuestro diseño
+    font-size: 62.5%;// 1rem = 10px; 10px/16px = 62.5;
+ 
+    @include respond(tab-land){// width < 1200?
+        font-size: 56.25%; //1rem = 9px, 97/16 = 50%
+
+    }
     
+    @include respond(tab-port){// width < 900?
+        font-size: 50%;  //1 rem = 8px, 8/16 = 50%
+
+    }
+
+   //@include respond(phone  ){
+     //   font-size: 30%;// 1rem = 4.8px
+    //}
+
+    @include respond(big-desktop){
+        font-size: 75%; //1rem = 12, 12/16
+
+    }
+
+
 }
 
 body {
