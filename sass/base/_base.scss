@@ -7,8 +7,16 @@ box-sizing: inherit;
 
 }
 
+//Solucionar el desbordamiento de los lados en phone
+html,body
+{
+    overflow-x: hidden; 
+}
+
 /*selector raiz*/
+
 html {
+    overflow-x: hidden; 
     //Esto define que es un rem
     //Esto define todo el tamaño de nuestro diseño
     font-size: 62.5%;// 1rem = 10px; 10px/16px = 62.5;
@@ -20,6 +28,7 @@ html {
     
     @include respond(tab-port){// width < 900?
         font-size: 50%;  //1 rem = 8px, 8/16 = 50%
+        
 
     }
 

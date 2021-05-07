@@ -18,8 +18,13 @@
         cursor: pointer;
 
         @include respond(tab-port){
-            top:3rem;
-            right: 3rem;
+            top:4rem;
+            right: 4rem;
+
+            @include respond(phone){
+                top: 3rem;
+                right: 3rem;
+            }
         }
     }
 
@@ -39,7 +44,7 @@
         //transform: scale(80);
         @include respond(tab-port){
             top:4.5rem;
-            right: 4,5rem;
+            right: 4.5rem;
         }
 
         @include respond(phone){

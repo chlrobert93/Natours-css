@@ -66,8 +66,12 @@ Dark green: #28b485
   padding: 0;
   box-sizing: inherit; }
 
+html, body {
+  overflow-x: hidden; }
+
 /*selector raiz*/
 html {
+  overflow-x: hidden;
   font-size: 62.5%; }
   @media (max-width: 75em) {
     html {
@@ -628,9 +632,15 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
-    margin-top: 8rem; }
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
@@ -638,6 +648,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -660,6 +674,10 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .row {
   max-width: 114rem;
@@ -671,7 +689,8 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -750,6 +769,10 @@ body {
   cursor: pointer; }
   @media (max-width: 56.25em) {
     .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 56.25em) and (max-width: 37.5em) {
+    .navigation__button {
       top: 3rem;
       right: 3rem; } }
 
@@ -766,7 +789,7 @@ body {
   @media (max-width: 56.25em) {
     .navigation__background {
       top: 4.5rem;
-      right: 4,5rem; } }
+      right: 4.5rem; } }
   @media (max-width: 37.5em) {
     .navigation__background {
       top: 3.5rem;
@@ -903,7 +926,8 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
