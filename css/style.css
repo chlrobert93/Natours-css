@@ -12,6 +12,8 @@ $breakpoint argument choices;
 -tab-land
 -big-desktop
 
+ORDER:Base + typography > general layout + grid page layout > componenets
+
 */
 /*
 COLORS
@@ -80,15 +82,18 @@ html {
 body {
   box-sizing: border-box;
   /*cuadro de borde cambia modelo del cuadro para que los bordes y los rellenos ya no
-    se agreguen al ancho total o la altura total que especificamos para un cuadro*/ }
+    se agreguen al ancho total o la altura total que especificamos para un cuadro*/
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /*peso de la fuente*/
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -115,12 +120,19 @@ body {
             animation-delay: 3s;*/
     /*Repite la animación*/
     /*animation-iteration-count: 3;*/ }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 1rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -132,6 +144,12 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(10, 10, 10, 0.2); }
