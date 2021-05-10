@@ -1,4 +1,4 @@
-.story {
+ .story {
     width: 75%;
     margin:0 auto;
     box-shadow: 0 3rem 6rem rgba($color-dark, .1);
@@ -6,10 +6,19 @@
     background-color: rgba($color-white,.6);
     border-radius: 3px;
     padding: 6rem;
-    //padding-left: 9rem;
+    padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
    
 
     //Foto testimonos
@@ -24,9 +33,12 @@
        clip-path: circle(50% at 50% 50%);
        //Ajustar el circulo a ala izquierda
        transform: translateX(-3rem) skewX(12deg);
-       overflow: hidden; 
+       //overflow: hidden; 
        position:  relative;
        
+       @include respond(phone){
+        transform: translateX(-3rem)  skewX(0);
+    }
     
     }
 
@@ -41,6 +53,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
 
     //texto en la imagen
