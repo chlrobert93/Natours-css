@@ -4,7 +4,7 @@
       to right bottom, 
     rgba($color-primary-light,0.8),
     rgba($color-primary-dark,0.8)), 
-     url(../img/hero.jpg);
+     url(../img/hero-small.jpg);
     background-size: cover;
     background-position:top;
     position:relative;
@@ -12,6 +12,32 @@
     poligono del encabezado*/
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+     //Si empre que la resolución sea superior a 192 y el ancho es mayor a 600 se aplica el código o mayor a 2000px
+     //Combertir en em 600/16 2000/16
+     @media (min-resolution: 192dpi) and ( min-width: 37.5em), (min-width: 125em)  {
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-secondary-light,0.8),
+            rgba($color-secondary-light,0.8)), 
+           url(../img/hero.jpg);
+
+     }
+
+     //Para una pantalla de baja resolución si es mayor 2000px aplica el código
+    /* @media (min-width: 2000px)  {
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-secondary-light,0.8),
+            rgba($color-secondary-light,0.8)), 
+           url(../img/hero.jpg);
+
+     }*/
+
+
+
+
+
     
      //Reducir el poligono
     @include respond(phone){
