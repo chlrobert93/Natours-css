@@ -14,9 +14,19 @@
         to right bottom, 
       rgba($color-primary-light,0.8),
       rgba($color-primary-dark,0.8)), 
-    url(../img/nat-4.jpg);
+    url(../img/nat-4-small.jpg);
     //Tamaño de imagen de fondo
     background-size:cover;
+
+       //Si empre que la resolución sea superior a 192 y el ancho es mayor a 600 se aplica el código o mayor a 2000px
+     //Combertir en em 600/16 2000/16
+    @media(min-resolution: 192dpi) and (min-width: 37.5em), (min-width:125em){
+        background-image: linear-gradient(
+            to right bottom, 
+          rgba($color-secondary-light,0.8),
+          rgba($color-primary-dark,0.8)), 
+        url(../img/nat-4.jpg);
+    }
 
     //Sesgar la parte de cuadros
     transform: skewY(-7deg);
