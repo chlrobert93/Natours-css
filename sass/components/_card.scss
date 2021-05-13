@@ -17,6 +17,8 @@
         top: 0;
         left: 0;
         width: 100%;
+        //for safari
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         //Esquina, el desbordamiento se recorta y el resto del contenido  sera visible
