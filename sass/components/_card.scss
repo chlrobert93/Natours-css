@@ -196,8 +196,11 @@
                
             }
              //Despúes de <900px
-            @include respond(tab-port){
-                
+           //@include respond(tab-port){
+           //Que todo esto suceda cuando la pantalla sea más pequeña y si es un dipositivo tactil
+            @media only screen and (max-width: 56.25em),
+                   only screem and (hover: none)   
+            {  
            
                 //Espacio de la tarjeta 
                 height: auto;
