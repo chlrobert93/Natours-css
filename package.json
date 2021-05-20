@@ -14,7 +14,7 @@
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "Eder",
-  "license": "ISC",
+  "license": "ISC", 
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "concat": "^1.0.3",
