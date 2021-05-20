@@ -20,7 +20,7 @@
 
        //Si empre que la resolución sea superior a 192 y el ancho es mayor a 600 se aplica el código o mayor a 2000px
      //Combertir en em 600/16 2000/16
-    @media(min-resolution: 192dpi) and (min-width: 37.5em), (min-width:125em){
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width:125em){
         background-image: linear-gradient(
             to right bottom, 
           rgba($color-primary-light,0.8),
@@ -86,7 +86,7 @@
                                      transparent 50%),
                                      url(../img/nat-10-small.jpg);
                                      
-       @media (min-resolution: 192dpi) and ( min-width: 37.5em), 
+       @media only screem and (min-resolution: 192dpi) and ( min-width: 37.5em), 
               //Para el navegador safari
                (-webkit-min-device-pixel-ration:2) and (min-width: 37.5em),
                   (min-width: 125em)  {
